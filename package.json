@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-v2",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build tooling for image optimization (WebP/AVIF).",
+  "scripts": {
+    "convert": "node scripts/convert-images.js"
+  },
+  "dependencies": {
+    "sharp": "^0.33.3"
+  }
+}

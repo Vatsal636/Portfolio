@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vatsal Gokani | Web Developer</title>
+        <meta name="description"
+            content="Portfolio of Vatsal Gokani, a frontend web developer with experience in PHP, Flask, and responsive design.">
+        <meta name="theme-color" content="#4f46e5">
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#4f46e5">
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0f172a">
+        <!-- Open Graph -->
+        <meta property="og:title" content="Vatsal Gokani | Web Developer">
+        <meta property="og:description" content="Portfolio of Vatsal Gokani, a frontend web developer with experience in React, PHP, Flask, and responsive design.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="assets/images/site.png">
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Vatsal Gokani | Web Developer">
+        <meta name="twitter:description" content="Explore projects, resume, and contact details for Vatsal Gokani.">
+        <meta name="twitter:image" content="assets/images/site.png">
+        <link rel="stylesheet" href="styles.css">
+        <!-- Font Awesome for icons -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
+        <link rel="manifest" href="assets/manifest.json">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
+                <!-- JSON-LD Person Schema -->
+                <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Person",
+                    "name": "Vatsal Gokani",
+                    "jobTitle": "Web Developer",
+                    "image": "assets/images/profile.jpg",
+                    "sameAs": [
+                        "https://github.com/Vatsal636",
+                        "https://www.linkedin.com/in/vatsal-gokani-7759a0247",
+                        "https://www.instagram.com/vatsal_gokani/"
+                    ]
+                }
+                </script>
+    </head>
+
+    <body>
+        <a href="#main-content" class="skip-link">Skip to content</a>
+        <div id="scroll-progress"></div>
+        <header>
+            <div class="container">
+                <nav>
+                    <div class="logo">
+                        <a href="#home">VG</a>
+                    </div>
+                    <ul id="primary-nav" class="nav-links">
+                        <li><a href="#home"
+                                class="nav-link active">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#projects"
+                                class="nav-link">Projects</a></li>
+                        <li><a href="#resume" class="nav-link">Resume</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    <button id="theme-toggle" class="theme-toggle"
+                        aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                    <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <!-- Home Section -->
+            <section id="home" class="hero">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="animate load-animate delay-1">Hi, I'm <span
+                                class="highlight">Vatsal Gokani</span></h1>
+                        <h2 class="animate load-animate delay-2">Creative
+                            Frontend Developer</h2>
+                        <p class="animate load-animate delay-3">
+                            Passionate about turning ideas into interactive,
+                            user-friendly
+                            websites that bridge design and functionality.
+                        </p>
+                        <div class="cta-buttons animate load-animate delay-4">
+                            <a href="#projects" class="btn primary-btn">View My
+                                Work</a>
+                            <a href="#contact" class="btn secondary-btn">Get In
+                                Touch</a>
+                        </div>
+                        <div class="social-links animate load-animate delay-5">
+                            <a href="https://github.com/Vatsal636" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub Profile">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/vatsal-gokani-7759a0247/" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn Profile">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:vatsalgokani2@gmail.com"
+                                aria-label="Email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image animate load-animate delay-3">
+                        <img src="assets/images/profile.jpg"
+                            alt="Portrait of Vatsal Gokani, Full Stack Developer"
+                            class="profile-image" decoding="async" fetchpriority="high">
+                    </div>
+                </div>
+                <div class="hero-blob" aria-hidden="true"></div>
+            </section>
+
+            <section id="about" class="about modern-highlight">
+                <div class="container">
+                    <h2 class="section-title animate fade-in">About Me</h2>
+                    <div class="highlight-wrapper">
+                        <div class="highlight-left animate slide-left">
+                            <p class="intro-text">
+                                Hi, I'm <strong>Vatsal Gokani</strong> — a
+                                frontend developer who enjoys building elegant,
+                                responsive, and interactive web experiences.
+                            </p>
+                            <p class="about-desc">
+                                With a strong focus on clean UI, I specialize in
+                                building React-based web applications that
+                                balance functionality and aesthetics. My work
+                                blends modern code practices with real-world
+                                usability.
+                            </p>
+                            <p class="about-desc">
+                                Outside of code, I stay curious — learning new
+                                tools, taking part in hackathons, and constantly
+                                upgrading my skill set to stay ahead in the tech
+                                world.
+                            </p>
+                            <a href="#skills" class="btn view-skills-btn">See My
+                                Skills</a>
+                        </div>
+
+                        <div class="highlight-right animate slide-right">
+                            <ul class="bio-list">
+                                <li><strong>🎓 Education:</strong> B.Tech Computer
+                                    Science & Engineering</li>
+                                <li><strong>📍 Location:</strong> Anand, Gujarat,
+                                    India</li>
+                                <li><strong>💼 Experience:</strong> 3
+                                    internships + multiple live projects</li>
+                                <li><strong>📌 Specialties:</strong> React,
+                                    UI/UX, Full-stack fundamentals</li>
+                                <li><strong>🚀 Goal:</strong> Build innovative
+                                    web solutions that matter</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="skills-section animate">
+                <h2 class="section-title">🧠 My Skillset</h2>
+                <div class="skills-grid">
+
+                    <!-- Frontend Card -->
+                    <div class="skill-card glass-card animate">
+                        <div class="card-header">
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="skill-bar" data-percent="95%">
+                            <span>HTML5</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">95%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-percent="90%">
+                            <span>CSS3</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">90%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-percent="85%">
+                            <span>JavaScript</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">80%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-percent="88%">
+                            <span>React.js</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">75%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend Card -->
+                    <div class="skill-card glass-card animate">
+                        <div class="card-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class="skill-bar" data-percent="80%">
+                            <span>Python</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">80%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-percent="75%">
+                            <span>Flask</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">75%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-percent="80%">
+                            <span>PHP</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">80%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-percent="75%">
+                            <span>MySQL / SQLite</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">75%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools Card -->
+                    <div class="skill-card glass-card animate">
+                        <div class="card-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Tools</h3>
+                        </div>
+                        <div class="skill-bar" data-percent="75%">
+                            <span>Git</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">75%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-percent="90%">
+                            <span>VS Code</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">90%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-percent="70%">
+                            <span>Figma</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">70%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Card -->
+                    <div class="skill-card glass-card animate">
+                        <div class="card-header">
+                            <i class="fas fa-shapes"></i>
+                            <h3>Other</h3>
+                        </div>
+                        <div class="skill-bar" data-percent="75%">
+                            <span>UI/UX</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">75%</div>
+                            </div>
+                        </div>
+                        <div class="skill-bar" data-percent="80%">
+                            <span>WordPress</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar-fill">80%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="projects">
+                <div class="container">
+                    <h2 class="section-title animate fade-in">My Projects</h2>
+                    <div class="projects-grid">
+
+                        <!-- Project 1 - Urban Company Clone -->
+                        <div class="project-card animate slide-up">
+                            <div class="project-image">
+                                <picture>
+                                    <source type="image/avif" srcset="assets/images/projects/urban.avif">
+                                    <source type="image/webp" srcset="assets/images/projects/urban.webp">
+                                    <img src="assets/images/projects/urban.png"
+                                        alt="Urban Service Provider Website">
+                                </picture>
+                            </div>
+                            <div class="project-content">
+                                <h3>Urban Service Provider</h3>
+                                <p>A modern website inspired by Urban Company
+                                    built using React.js. Includes service
+                                    listings, animated UI, cart functionality,
+                                    routing, and responsive layouts using React
+                                    Hooks and Context API.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">Context API</span>
+                                    <span class="tech-badge">HTML/CSS</span>
+                                </div>
+                                <!-- <div class="project-links">
+                        <a href="https://github.com/your-repo-url" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                        <a href="https://your-live-demo.com" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                    </div> -->
+                            </div>
+                        </div>
+
+                        <!-- Project 2 - E-commerce -->
+                        <div class="project-card animate slide-up delay-2">
+                            <div class="project-image">
+                                <picture>
+                                    <source type="image/avif" srcset="assets/images/projects/ecommerce.avif">
+                                    <source type="image/webp" srcset="assets/images/projects/ecommerce.webp">
+                                    <img src="assets/images/projects/ecommerce.jpg" loading="lazy" decoding="async"
+                                        alt="E-commerce Website">
+                                </picture>
+                            </div>
+                            <div class="project-content">
+                                <h3>E-commerce Platform</h3>
+                                <p>An online store with cart, checkout, and
+                                    order tracking features. Users can browse,
+                                    purchase, and view orders in real-time.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySql</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">HTML-CSS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3 - Library Management -->
+                        <div class="project-card animate slide-up delay-4">
+                            <div class="project-image">
+                                <picture>
+                                    <source type="image/avif" srcset="assets/images/projects/library.avif">
+                                    <source type="image/webp" srcset="assets/images/projects/library.webp">
+                                    <img src="assets/images/projects/library.jpg" loading="lazy" decoding="async"
+                                        alt="Library Management System">
+                                </picture>
+                            </div>
+                            <div class="project-content">
+                                <h3>Library Management System</h3>
+                                <p>A system to manage books and users with
+                                    role-based access. Admin can manage
+                                    inventory and users, while students can view
+                                    issued books.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Flask</span>
+                                    <span class="tech-badge">SQLite</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4 - Hostel Website -->
+                        <div class="project-card animate slide-up delay-6">
+                            <div class="project-image">
+                                <picture>
+                                    <source type="image/avif" srcset="assets/images/projects/hostel.avif">
+                                    <source type="image/webp" srcset="assets/images/projects/hostel.webp">
+                                    <img src="assets/images/projects/hostel.jpg" loading="lazy" decoding="async"
+                                        alt="Hostel Website">
+                                </picture>
+                            </div>
+                            <div class="project-content">
+                                <h3>Static Hostel Website</h3>
+                                <p>A responsive website showcasing hostel
+                                    facilities, events, admission form, and
+                                    gallery. Includes sections for activities
+                                    and contact.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">HTML</span>
+                                    <span class="tech-badge">CSS</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5 - Textile Business Management System -->
+                        <div class="project-card animate slide-up delay-8">
+                            <div class="project-image">
+                                <picture>
+                                    <source type="image/avif" srcset="assets/images/projects/tbms.avif">
+                                    <source type="image/webp" srcset="assets/images/projects/tbms.webp">
+                                    <img src="assets/images/projects/tbms.png" loading="lazy" decoding="async"
+                                        alt="Textile Business Management System">
+                                </picture>
+                            </div>
+                            <div class="project-content">
+                                <h3>Textile Business Management System</h3>
+                                <p>A comprehensive CMS for textile businesses featuring reports & analytics, sales tracking, inventory management, and party reporting. Includes dashboards with revenue insights, monthly sales trends, and product analytics.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">MongoDB</span>
+                                    <span class="tech-badge">Chart.js</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6 - Personal Finance Tracker -->
+                        <div class="project-card animate slide-up delay-10">
+                            <div class="project-image">
+                                <picture>
+                                    <source type="image/avif" srcset="assets/images/projects/pft.avif">
+                                    <source type="image/webp" srcset="assets/images/projects/pft.webp">
+                                    <img src="assets/images/projects/pft.png" loading="lazy" decoding="async"
+                                        alt="Personal Finance Tracker">
+                                </picture>
+                            </div>
+                            <div class="project-content">
+                                <h3>Personal Finance Tracker</h3>
+                                <p>A modern finance management dashboard to track income, expenses, budgets, and investments. Features interactive charts for income vs expenses trends and expense category breakdowns with real-time data visualization.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                    <span class="tech-badge">Chart.js</span>
+                                    <span class="tech-badge">CSS3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 7 - MotoTrack (Bike Tracking Dashboard) -->
+                        <div class="project-card animate slide-up delay-12">
+                            <div class="project-image">
+                                <picture>
+                                    <source type="image/avif" srcset="assets/images/projects/mototrack.avif">
+                                    <source type="image/webp" srcset="assets/images/projects/mototrack.webp">
+                                    <img src="assets/images/projects/mototrack.png" alt="MotoTrack Dashboard" loading="lazy" decoding="async">
+                                </picture>
+                            </div>
+                            <div class="project-content">
+                                <h3>MotoTrack</h3>
+                                <p>A bike tracking web app that logs odometer readings, fuel fills, mileage, service costs, reminders, and reports. Provides a clean dashboard with stats like total distance, average mileage, fuel cost, and cost per km.</p>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">React.js</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">Chart.js</span>
+                                    <span class="tech-badge">HTML/CSS</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resume Section -->
+            <section id="resume" class="resume">
+                <div class="container">
+                    <h2 class="section-title animate fade-in">Resume</h2>
+                    <div class="resume-content animate slide-up">
+                        <p>Download my resume to learn more about my education,
+                            work experience, and skills.</p>
+                        <a href="assets/docs/VatsalGokaniResume.pdf" download
+                            class="btn primary-btn">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                    <div class="experience">
+                        <h3 class="animate fade-in delay-2">Education</h3>
+                        <div class="timeline">
+                            <div class="timeline-item animate slide-right">
+                                <div class="timeline-date">2024 - 2027</div>
+                                <div class="timeline-content">
+                                    <h4>B.Tech in Computer Science &
+                                        Technology</h4>
+                                    <p class="company">Charusat University -
+                                        Changa, Gujarat</p>
+                                    <p>Grade: 8.00</p>
+                                </div>
+                            </div>
+                            <div
+                                class="timeline-item animate slide-right delay-2">
+                                <div class="timeline-date">2021 - 2024</div>
+                                <div class="timeline-content">
+                                    <h4>Diploma in Computer Engineering</h4>
+                                    <p class="company">Bhailalbhai & Bhikhbhai
+                                        Institute of Technology - Anand,
+                                        Gujarat</p>
+                                    <p>Grade: 8.57</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience">
+                        <h3
+                            class="section-title animate fade-in delay-2">Experience</h3>
+                        <div class="timeline">
+
+                            <!-- Internship 3 -->
+                            <div class="timeline-item animate slide-right">
+                                <div class="timeline-date">May – June 2025</div>
+                                <div class="timeline-content">
+                                    <h4 class="position">Summer Internship -
+                                        III</h4>
+                                    <p class="company">Full-Stack React
+                                        Internship</p>
+                                    <p class="duration">Duration: 6 Weeks</p>
+                                    <p class="description">
+                                        Built a modern <strong>Urban Service
+                                            Provider</strong> website (inspired
+                                        by Urban Company) using
+                                        <strong>React.js</strong>.
+                                        Developed reusable components,
+                                        integrated routing, animations, and
+                                        responsive design.
+                                        Gained hands-on experience with React
+                                        Hooks, Context API, and modular
+                                        architecture.
+                                    </p>
+                                    <div class="tech-stack-exp">
+                                        <span>React.js</span>
+                                        <span>Context API</span>
+                                        <span>React Router</span>
+                                        <span>Lottie</span>
+                                        <span>HTML/CSS</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Internship 2 -->
+                            <div class="timeline-item animate slide-right">
+                                <div class="timeline-date">September 2023</div>
+                                <div class="timeline-content">
+                                    <h4 class="position">Summer Internship -
+                                        II</h4>
+                                    <p class="company">Internship Project</p>
+                                    <p class="duration">Duration: 4 Weeks</p>
+                                    <p class="description">
+                                        Developed a fully functional
+                                        <strong>hostel management
+                                            website</strong> to handle
+                                        facilities, student activities, and
+                                        admission forms. Emphasized a clean and
+                                        user-friendly UI.
+                                    </p>
+                                    <div class="tech-stack-exp">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JavaScript</span>
+                                        <span>PHP</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Internship 1 -->
+                            <div
+                                class="timeline-item animate slide-right delay-2">
+                                <div class="timeline-date">October 2022</div>
+                                <div class="timeline-content">
+                                    <h4 class="position">Summer Internship -
+                                        I</h4>
+                                    <p class="company">WordPress Internship</p>
+                                    <p class="duration">Duration: 15 Days</p>
+                                    <p class="description">
+                                        Gained practical experience in
+                                        <strong>WordPress development</strong>,
+                                        including theme customization,
+                                        plugin integration, and basic SEO
+                                        practices. Worked on improving site
+                                        performance and UI responsiveness.
+                                    </p>
+                                    <div class="tech-stack-exp">
+                                        <span>WordPress</span>
+                                        <span>Elementor</span>
+                                        <span>HTML/CSS</span>
+                                        <span>SEO</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <!-- Contact Section -->
+            <section id="contact" class="contact">
+                <div class="container">
+                    <h2 class="section-title animate fade-in">Get In Touch</h2>
+                    <div class="contact-content">
+                        <div class="contact-info animate slide-right">
+                            <!-- Email Info -->
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <p>
+                                    <a href="mailto:vatsalgokani2@gmail.com">vatsalgokani2@gmail.com</a>
+                                </p>
+                            </div>
+                            <!-- Phone Info -->
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <p><a href="tel:+918780967194">+91 8780967194</a></p>
+                            </div>
+                            <!-- Address Info -->
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>Anand - Gujarat</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-social-links animate slide-left">
+                            <p>Feel free to connect with me on social media:</p>
+                            <div class="social-links">
+                                <a href="https://github.com/Vatsal636"
+                                    target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a
+                                    href="https://www.linkedin.com/in/vatsal-gokani-7759a0247"
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label="LinkedIn Profile">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/vatsal_gokani/"
+                                    target="_blank" rel="noopener noreferrer"
+                                    aria-label="Instagram Profile">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Enhanced Footer -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 <span class="highlight">Vatsal Gokani</span>. All
+                    Rights Reserved.</p>
+                <p>Designed and built with ❤️ by Vatsal Gokani</p>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+
+</html>
