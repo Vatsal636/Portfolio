@@ -77,7 +77,7 @@ npx serve
 
 ## 📱 Contact
 
-- **Email**: vatsalgokani21@gnu.ac.in
+- **Email**: vatsalgokani2@gmail.com
 - **LinkedIn**: [Vatsal Gokani](https://www.linkedin.com/in/vatsal-gokani-7759a0247)
 - **GitHub**: [@Vatsal636](https://github.com/Vatsal636)
 - **Instagram**: [@vatsal_gokani](https://www.instagram.com/vatsal_gokani/)
