@@ -45,17 +45,12 @@ portfolio/
 
 ## 🎨 Key Projects Featured
 
-1. **Urban Service Provider** - A modern website inspired by Urban Company built using React.js. Includes service listings, animated UI, cart functionality, routing, and responsive layouts using React Hooks and Context API.
-
-2. **Textile Business Management System** - A comprehensive CMS for textile businesses featuring reports & analytics, sales tracking, inventory management, and party reporting. Includes dashboards with revenue insights, monthly sales trends, and product analytics.
-
-3. **Personal Finance Tracker** - A modern finance management dashboard to track income, expenses, budgets, and investments. Features interactive charts for income vs expenses trends and expense category breakdowns with real-time data visualization.
-
-4. **MotoTrack** - A bike tracking web app that logs odometer readings, fuel fills, mileage, service costs, reminders, and reports. Provides a clean dashboard with stats like total distance, average mileage, fuel cost, and cost per km.
-
-5. **E-commerce Platform** - An online store with cart, checkout, and order tracking features. Users can browse, purchase, and view orders in real-time.
-
-6. **Static Hostel Website** - A responsive website showcasing hostel facilities, events, admission form, and gallery. Includes sections for activities and contact.
+- Urban Service Provider
+- Textile Business Management System
+- Personal Finance Tracker
+- MotoTrack
+- E-commerce Platform
+- Static Hostel Website
 
 ## 💻 Local Development
 
