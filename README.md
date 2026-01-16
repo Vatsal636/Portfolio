@@ -22,7 +22,7 @@ A modern, responsive portfolio website showcasing my web development projects an
 
 ## 🚀 Live Demo
 
-Visit the live website: [Portfolio](https://vatsal636.github.io/Portfolio/)
+Visit the live website: [Portfolio](https://vatsalgokani.netlify.app/)
 
 ## 📂 Project Structure
 
