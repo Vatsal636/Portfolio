@@ -56,28 +56,27 @@ This portfolio is a reflection of my journey as a developer — showcasing **9 r
 <table>
   <tr>
     <td align="center" width="25%">
-      <img width="60" src="https://img.icons8.com/nolan/64/responsive.png" alt="Responsive"/>
-      <br/><b>Fully Responsive</b>
-      <br/><sub>Pixel-perfect on every device — mobile, tablet & desktop</sub>
+      <br/>
+      <h3>📱 Fully Responsive</h3>
+      <sub>Pixel-perfect on every device — mobile, tablet & desktop</sub>
     </td>
     <td align="center" width="25%">
-      <img width="60" src="https://img.icons8.com/nolan/64/animation.png" alt="Animations"/>
-      <br/><b>Smooth Animations</b>
-      <br/><sub>Scroll-triggered fade-ins, hover effects & transitions</sub>
+      <br/>
+      <h3>✨ Smooth Animations</h3>
+      <sub>Scroll-triggered fade-ins, hover effects & transitions</sub>
     </td>
     <td align="center" width="25%">
-      <img width="60" src="https://img.icons8.com/nolan/64/speed.png" alt="Performance"/>
-      <br/><b>Blazing Fast</b>
-      <br/><sub>Zero dependencies, optimized AVIF images & minimal JS</sub>
+      <br/>
+      <h3>⚡ Blazing Fast</h3>
+      <sub>Zero dependencies, optimized AVIF images & minimal JS</sub>
     </td>
     <td align="center" width="25%">
-      <img width="60" src="https://img.icons8.com/nolan/64/paint-palette.png" alt="Design"/>
-      <br/><b>Modern Design</b>
-      <br/><sub>Clean UI with CSS variables for easy theming</sub>
+      <br/>
+      <h3>🎨 Modern Design</h3>
+      <sub>Clean UI with CSS variables for easy theming</sub>
     </td>
   </tr>
 </table>
-
 
 <br/>
 
