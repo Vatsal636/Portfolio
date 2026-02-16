@@ -56,27 +56,28 @@ This portfolio is a reflection of my journey as a developer — showcasing **9 r
 <table>
   <tr>
     <td align="center" width="25%">
-      <img width="60" src="https://img.icons8.com/color/96/responsive.png" alt="Responsive"/>
+      <img width="60" src="https://icons8.com/icon/50146/responsive" alt="Responsive"/>
       <br/><b>Fully Responsive</b>
       <br/><sub>Pixel-perfect on every device — mobile, tablet & desktop</sub>
     </td>
     <td align="center" width="25%">
-      <img width="60" src="https://img.icons8.com/color/96/animation.png" alt="Animations"/>
+      <img width="60" src="https://img.icons8.com/nolan/64/animation.png" alt="Animations"/>
       <br/><b>Smooth Animations</b>
       <br/><sub>Scroll-triggered fade-ins, hover effects & transitions</sub>
     </td>
     <td align="center" width="25%">
-      <img width="60" src="https://img.icons8.com/color/96/speed.png" alt="Performance"/>
+      <img width="60" src="https://img.icons8.com/nolan/64/speed.png" alt="Performance"/>
       <br/><b>Blazing Fast</b>
       <br/><sub>Zero dependencies, optimized AVIF images & minimal JS</sub>
     </td>
     <td align="center" width="25%">
-      <img width="60" src="https://img.icons8.com/color/96/paint-palette.png" alt="Design"/>
+      <img width="60" src="https://img.icons8.com/nolan/64/paint-palette.png" alt="Design"/>
       <br/><b>Modern Design</b>
       <br/><sub>Clean UI with CSS variables for easy theming</sub>
     </td>
   </tr>
 </table>
+
 
 
 <br/>
