@@ -56,7 +56,7 @@ This portfolio is a reflection of my journey as a developer — showcasing **9 r
 <table>
   <tr>
     <td align="center" width="25%">
-      <img width="60" src="https://icons8.com/icon/50146/responsive" alt="Responsive"/>
+      <img width="60" src="https://img.icons8.com/?size=100&id=50146&format=png&color=000000" alt="Responsive"/>
       <br/><b>Fully Responsive</b>
       <br/><sub>Pixel-perfect on every device — mobile, tablet & desktop</sub>
     </td>
