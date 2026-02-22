@@ -1,82 +1,615 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vatsal's Portfolio - Web Developer & Designer">
-    <title>Vatsal - Portfolio</title>
+    <meta name="description"
+        content="Vatsal Gokani - Full Stack Developer specializing in React, Next.js, Node.js & MongoDB. Building modern web applications with clean architecture.">
+    <meta name="keywords" content="Full Stack Developer, React Developer, Next.js, Node.js, MongoDB, Web Developer">
+    <meta name="author" content="Vatsal Gokani">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vatsal Gokani | Full Stack Developer">
+    <meta property="og:description"
+        content="Building modern, scalable web applications with React, Next.js & the MERN stack.">
+    <meta property="og:image" content="assets/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <title>Vatsal Gokani | Full Stack Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Vatsal</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo"><span class="logo-v">V</span><span class="logo-g">G</span></div>
+            <div class="preloader-bar">
+                <div class="preloader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-mesh"></div>
+    <div class="noise-overlay"></div>
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Scroll Progress Ring -->
+    <div class="scroll-progress-ring">
+        <svg viewBox="0 0 60 60">
+            <defs>
+                <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#6366f1" />
+                    <stop offset="100%" stop-color="#ec4899" />
+                </linearGradient>
+            </defs>
+            <circle class="progress-bg" cx="30" cy="30" r="25" />
+            <circle class="progress-bar" cx="30" cy="30" r="25" />
+        </svg>
+        <span class="percentage">0%</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo"><span class="logo-v">V</span><span class="logo-g">G</span></a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <a href="#contact" class="nav-cta">Let's Talk</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Hello, I'm <span class="highlight">Vatsal</span></h1>
-            <p class="subtitle">Web Developer | Creative Designer | Problem Solver</p>
-            <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                <a href="projects.html" class="btn btn-secondary">View Projects</a>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-container">
+            <div class="hero-content reveal-left">
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    <span>Available for opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="line"><span>Hello, I'm</span></span>
+                    <span class="line"><span class="gradient-text">Vatsal Gokani</span></span>
+                </h1>
+                <p class="hero-subtitle">
+                    A passionate <strong>Full Stack Developer</strong> crafting modern web experiences with React,
+                    Next.js, and the MERN stack. I turn complex problems into elegant, user-friendly solutions.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        <span>View My Work</span>
+                    </a>
+                    <a href="assets/docs/VatsalGokaniResume.pdf" class="btn btn-secondary" target="_blank">
+                        <i class="fas fa-download"></i>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual reveal-right">
+                <div class="hero-image-container">
+                    <div class="hero-image-wrapper">
+                        <img src="assets/images/profile.jpg" alt="Vatsal Gokani" class="hero-image">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm a passionate web developer with expertise in creating modern, responsive websites and applications. I love turning ideas into reality through code and design.</p>
+        <div class="section-header reveal">
+            <span class="section-label">About Me</span>
+            <h2 class="section-title">Building the <span class="gradient-text">Future</span> of Web</h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-content reveal-left">
+                <p class="about-text">
+                    I'm a <span class="about-highlight">Full Stack Developer</span> with a deep passion for building web
+                    applications that are not only functional but also beautiful and performant. Currently pursuing my
+                    degree while working on real-world projects that solve actual business problems.
+                </p>
+                <p class="about-text">
+                    My journey started with simple HTML pages, and now I architect complete systems using <span
+                        class="about-highlight">React, Next.js, Node.js, and various databases</span>. I believe in
+                    writing clean, maintainable code and creating intuitive user experiences.
+                </p>
+                <p class="about-text">
+                    When I'm not coding, you'll find me exploring new technologies, contributing to open source, or
+                    sharing knowledge with the developer community.
+                </p>
+                <div class="about-stats stagger-children">
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Learning</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Tech Stacks</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual reveal-right">
+                <div class="code-window">
+                    <div class="code-window-header">
+                        <span class="window-dot red"></span>
+                        <span class="window-dot yellow"></span>
+                        <span class="window-dot green"></span>
+                    </div>
+                    <div class="code-window-content">
+                        <span class="code-line"><span class="code-keyword">const</span> <span
+                                class="code-variable">developer</span> = {</span>
+                        <span class="code-line"> <span class="code-string">name</span>: <span
+                                class="code-string">"Vatsal Gokani"</span>,</span>
+                        <span class="code-line"> <span class="code-string">role</span>: <span class="code-string">"Full
+                                Stack Developer"</span>,</span>
+                        <span class="code-line"> <span class="code-string">skills</span>: [<span
+                                class="code-string">"React"</span>, <span class="code-string">"Next.js"</span>, <span
+                                class="code-string">"Node"</span>],</span>
+                        <span class="code-line"> <span class="code-string">passion</span>: <span
+                                class="code-string">"Building impactful products"</span>,</span>
+                        <span class="code-line"> <span class="code-function">createSolution</span>: () => {</span>
+                        <span class="code-line"> <span class="code-keyword">return</span> <span
+                                class="code-string">"Clean & Scalable Code"</span>;</span>
+                        <span class="code-line"> }</span>
+                        <span class="code-line">};</span>
+                        <span class="code-line"></span>
+                        <span class="code-line"><span class="code-comment">// Ready to build something
+                                amazing?</span></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="skills">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Frontend</h3>
-                    <p>HTML, CSS, JavaScript, React</p>
+        <div class="section-header reveal">
+            <span class="section-label">My Skills</span>
+            <h2 class="section-title">Technologies I <span class="gradient-text">Work With</span></h2>
+            <p class="section-description">I love exploring new technologies and constantly improving my craft. Here's
+                my current tech stack:</p>
+        </div>
+        <div class="skills-grid stagger-children">
+            <!-- Languages -->
+            <div class="skill-card">
+                <div class="skill-card-content">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <h3>Backend</h3>
-                    <p>Node.js, Express, MongoDB</p>
+            </div>
+
+            <!-- Full Stack -->
+            <div class="skill-card">
+                <div class="skill-card-content">
+                    <div class="skill-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Full Stack</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Redux</span>
+                        <span class="skill-tag">Prisma</span>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <h3>Tools</h3>
-                    <p>Git, VS Code, Figma</p>
+            </div>
+
+            <!-- Creative & UI -->
+            <div class="skill-card">
+                <div class="skill-card-content">
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Creative & UI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Framer Motion</span>
+                        <span class="skill-tag">GSAP</span>
+                        <span class="skill-tag">Three.js</span>
+                        <span class="skill-tag">Material UI</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data & DevOps -->
+            <div class="skill-card">
+                <div class="skill-card-content">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Data & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Vercel</span>
+                        <span class="skill-tag">Postman</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Experience & Education Timeline -->
+    <section id="journey" class="timeline-section">
+        <!-- Education Section -->
+        <div class="section-header reveal">
+            <span class="section-label">Academic Background</span>
+            <h2 class="section-title"><span class="gradient-text">Education</span></h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <!-- Education 1 - B.Tech -->
+            <div class="timeline-item left reveal-left">
+                <div class="timeline-node">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-date">
+                        <i class="far fa-calendar"></i> 2024 - 2027
+                    </span>
+                    <h3 class="timeline-title">B.Tech in Computer Science & Technology</h3>
+                    <span class="timeline-company">Charusat University - Changa, Gujarat</span>
+                    <p class="timeline-description">
+                        Pursuing Bachelor's degree in Computer Science with focus on software engineering, web
+                        technologies, and system design.
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li>Grade: <strong>8.00 CGPA</strong></li>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Software Engineering & Web Development</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education 2 - Diploma -->
+            <div class="timeline-item right reveal-right">
+                <div class="timeline-node">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-date">
+                        <i class="far fa-calendar"></i> 2021 - 2024
+                    </span>
+                    <h3 class="timeline-title">Diploma in Computer Engineering</h3>
+                    <span class="timeline-company">Bholabhai & Bhaichand Institute of Technology - Anand, Gujarat</span>
+                    <p class="timeline-description">
+                        Completed Diploma in Computer Engineering with strong foundation in programming, database
+                        management, and web technologies.
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li>Grade: <strong>8.57 CGPA</strong></li>
+                        <li>Programming Fundamentals</li>
+                        <li>Database Management Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div class="section-header reveal spacer-top">
+            <span class="section-label">Professional Journey</span>
+            <h2 class="section-title"><span class="gradient-text">Experience</span></h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <!-- Experience 1 - Summer Internship III -->
+            <div class="timeline-item left reveal-left">
+                <div class="timeline-node">
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-date">
+                        <i class="far fa-calendar"></i> May - June 2025
+                    </span>
+                    <h3 class="timeline-title">Summer Internship - III</h3>
+                    <span class="timeline-company">Full-Stack React Internship</span>
+                    <p class="timeline-description">
+                        Built a modern <strong>Urban Service Provider</strong> website (inspired by Urban Company) using
+                        <strong>React.js</strong>. Developed reusable components, integrated routing, animations, and
+                        responsive design.
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li>Gained hands-on experience with React Hooks, Context API</li>
+                        <li>Built modular architecture with reusable components</li>
+                        <li>Duration: 8 Weeks</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Context API</span>
+                        <span class="tech-tag">React Router</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 2 - Summer Internship II -->
+            <div class="timeline-item right reveal-right">
+                <div class="timeline-node">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-date">
+                        <i class="far fa-calendar"></i> September 2023
+                    </span>
+                    <h3 class="timeline-title">Summer Internship - II</h3>
+                    <span class="timeline-company">Internship Project</span>
+                    <p class="timeline-description">
+                        Developed a fully functional <strong>hostel management website</strong> to handle facilities,
+                        student activities, and admission forms. Emphasized a clean and user-friendly UI.
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li>Built complete student management system</li>
+                        <li>Implemented admission forms & activities module</li>
+                        <li>Duration: 4 Weeks</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">PHP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience 3 - Summer Internship I -->
+            <div class="timeline-item left reveal-left">
+                <div class="timeline-node">
+                    <i class="fab fa-wordpress"></i>
+                </div>
+                <div class="timeline-card">
+                    <span class="timeline-date">
+                        <i class="far fa-calendar"></i> October 2022
+                    </span>
+                    <h3 class="timeline-title">Summer Internship - I</h3>
+                    <span class="timeline-company">WordPress Internship</span>
+                    <p class="timeline-description">
+                        Gained practical experience in <strong>WordPress development</strong>, including theme
+                        customization, plugin integration, and basic SEO practices. Worked on improving site performance
+                        and UI responsiveness.
+                    </p>
+                    <ul class="timeline-highlights">
+                        <li>Theme customization & plugin integration</li>
+                        <li>SEO optimization & site performance</li>
+                        <li>Duration: 15 Days</li>
+                    </ul>
+                    <div class="timeline-tags">
+                        <span class="tech-tag">WordPress</span>
+                        <span class="tech-tag">Elementor</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">SEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header reveal">
+            <span class="section-label">Featured Work</span>
+            <h2 class="section-title">Projects That <span class="gradient-text">Define Me</span></h2>
+            <p class="section-description">Here are some of my recent projects that showcase my skills and passion for
+                building great products.</p>
+        </div>
+        <div class="projects-grid">
+            <!-- Featured Project - DayFlow HRMS -->
+            <div class="project-card featured reveal">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/dayflow.avif">
+                        <source type="image/webp" srcset="assets/images/projects/dayflow.webp">
+                        <img src="assets/images/projects/dayflow.png" alt="DayFlow HRMS Dashboard" loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Full Stack Application <span class="ongoing-badge">🚧
+                            Ongoing</span></span>
+                    <h3 class="project-title">DayFlow HRMS</h3>
+                    <p class="project-description">
+                        A comprehensive Human Resource Management System built to streamline employee management,
+                        attendance tracking, and HR workflows. Features role-based access control, team management, and
+                        a clean, intuitive dashboard interface designed for modern organizations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Prisma</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Vatsal636/DayFlow---HRMS" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project - TBMS -->
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/tbms.avif">
+                        <source type="image/webp" srcset="assets/images/projects/tbms.webp">
+                        <img src="assets/images/projects/tbms.png" alt="Textile Business Management System"
+                            loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Enterprise Solution</span>
+                    <h3 class="project-title">Textile Business Management</h3>
+                    <p class="project-description">
+                        Enterprise CMS for textile businesses featuring real-time inventory tracking, sales analytics,
+                        party-wise reporting, and revenue trend visualization.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Chart.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Vatsal636/Textile-Business-Management-System" target="_blank"
+                            rel="noopener noreferrer" class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project - Finance Tracker -->
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/pft.avif">
+                        <source type="image/webp" srcset="assets/images/projects/pft.webp">
+                        <img src="assets/images/projects/pft.png" alt="Personal Finance Tracker" loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">MERN Stack</span>
+                    <h3 class="project-title">Personal Finance Tracker</h3>
+                    <p class="project-description">
+                        Full-featured finance app with real-time dashboards, budget tracking with alerts, investment
+                        portfolio monitoring, and interactive visualizations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Tailwind</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Vatsal636/finance-tracker" target="_blank" rel="noopener noreferrer"
+                            class="project-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- View All Projects -->
+        <div class="reveal" style="text-align: center; margin-top: 3rem;">
+            <a href="projects.html" class="btn btn-secondary">
+                <i class="fas fa-th-large"></i>
+                <span>View All Projects</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <p>Feel free to reach out for collaborations or just a friendly chat!</p>
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-btn">Email</a>
-                <a href="https://github.com/Vatsal636" class="contact-btn" target="_blank">GitHub</a>
-                <a href="https://linkedin.com" class="contact-btn" target="_blank">LinkedIn</a>
+        <div class="contact-card reveal">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="contact-title">Let's Build Something <span class="gradient-text">Amazing</span></h2>
+            <p class="contact-subtitle">
+                I'm always open to discussing new opportunities, creative ideas, or just having a chat about technology.
+            </p>
+            <a href="mailto:vatsalgokani2@gmail.com" class="contact-email">
+                vatsalgokani2@gmail.com
+            </a>
+            <div class="social-links">
+                <a href="https://github.com/Vatsal636" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vatsal-gokani-7759a0247" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- <a href="https://twitter.com/VatsalGokani" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="Twitter">
+                    <i class="fab fa-twitter"></i>
+                </a> -->
+                <a href="https://instagram.com/vatsal_gokani" target="_blank" rel="noopener noreferrer"
+                    class="social-link" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Vatsal. All rights reserved.</p>
-        </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Designed & Built with <span style="color: #ec4899;">♥</span> by Vatsal Gokani © 2026</p>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
+
 </html>
+<script async data-explicit-opt-in="true" data-cookie-opt-in="true"
+    data-deployment-id="dpl_2bAMvVHqjjNmBRsubMjNkN6dEm5A"
+    src="https://vercel.live/_next-live/feedback/feedback.js"></script>

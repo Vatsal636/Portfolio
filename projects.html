@@ -1,151 +1,649 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Vatsal's Projects - Web Development Portfolio">
-    <title>Projects - Vatsal Portfolio</title>
+    <meta name="description"
+        content="All projects by Vatsal Gokani - Full Stack Developer. Explore my complete portfolio of web applications.">
+    <meta name="author" content="Vatsal Gokani">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <title>All Projects | Vatsal Gokani </title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+
+
 </head>
+
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">Vatsal</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#skills">Skills</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Animated Background -->
+    <div class="bg-mesh"></div>
+    <div class="noise-overlay"></div>
+    <div class="floating-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Scroll Progress Ring -->
+    <div class="scroll-progress-ring">
+        <svg viewBox="0 0 60 60">
+            <defs>
+                <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#6366f1" />
+                    <stop offset="100%" stop-color="#ec4899" />
+                </linearGradient>
+            </defs>
+            <circle class="progress-bg" cx="30" cy="30" r="25" />
+            <circle class="progress-bar" cx="30" cy="30" r="25" />
+        </svg>
+        <span class="percentage">0%</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><span class="logo-v">V</span><span class="logo-g">G</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#journey" class="nav-link">Journey</a></li>
+                <li><a href="#" class="nav-link active">Projects</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
             </ul>
+            <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <section class="projects" style="padding-top: 6rem;">
-        <div class="container">
-            <h2>My Projects</h2>
-            <p style="text-align: center; margin-bottom: 3rem; color: #6b7280; font-size: 1.1rem;">
-                Here are some of my recent projects showcasing my skills and expertise
-            </p>
-            
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="assets/images/projects/dayflow.avif" alt="DayFlow Project" class="project-image" onerror="this.style.display='none'">
-                    <div class="project-content">
-                        <h3>DayFlow</h3>
-                        <p>A modern productivity app for managing daily tasks and workflows with an intuitive interface.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+    <!-- Hero -->
+    <section class="projects-hero">
+        <a href="index.html" class="back-link reveal">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Home</span>
+        </a>
+        <div class="section-header reveal">
+            <span class="section-label">My Work</span>
+            <h1 class="section-title">All <span class="gradient-text">Projects</span></h1>
+            <p class="section-description">A collection of projects I've built, from simple tools to full-stack
+                applications.</p>
+        </div>
+    </section>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator" id="scrollIndicator">
+        <span class="scroll-text">Scroll to explore</span>
+        <div class="scroll-arrow">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+
+    <!-- Projects -->
+    <main class="projects-page">
+        <!-- Filter Buttons -->
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            <button class="filter-btn" data-filter="frontend">Frontend</button>
+            <button class="filter-btn" data-filter="other">Other</button>
+        </div>
+
+        <!-- Featured Projects -->
+        <div class="all-projects-grid stagger-children">
+
+            <!-- DayFlow HRMS -->
+            <div class="project-card featured" data-category="fullstack">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/dayflow.avif">
+                        <source type="image/webp" srcset="assets/images/projects/dayflow.webp">
+                        <img src="assets/images/projects/dayflow.png" alt="DayFlow HRMS Dashboard" loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Full Stack Application <span class="ongoing-badge">🚧
+                            Ongoing</span></span>
+                    <h3 class="project-title">DayFlow HRMS</h3>
+                    <p class="project-description">
+                        A comprehensive Human Resource Management System built to streamline employee management,
+                        attendance tracking, and HR workflows.
+                    </p>
+                    <button class="expand-toggle">
+                        <span>View Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Problem</h4>
+                        <p>Traditional HR management is often fragmented across spreadsheets and disconnected tools,
+                            making employee tracking, attendance monitoring, and leave management inefficient and
+                            error-prone.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>💡 Approach</h4>
+                        <p>Built a unified HRMS platform with role-based access control (Admin, Manager, Employee),
+                            real-time dashboards, and automated workflows. Used Next.js for SSR performance, Prisma ORM
+                            for type-safe database queries, and PostgreSQL for robust data storage.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>✅ Outcomes</h4>
+                        <ul>
+                            <li>Role-based authentication & authorization</li>
+                            <li>Employee onboarding & profile management</li>
+                            <li>Attendance tracking with clock-in/out</li>
+                            <li>Leave request & approval workflow</li>
+                            <li>Team management & hierarchy view</li>
+                            <li>Real-time analytics dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="detail-tech">
+                            <span class="tech-tag">Next.js 14</span>
+                            <span class="tech-tag">Prisma</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">NextAuth.js</span>
+                            <span class="tech-tag">TypeScript</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="assets/images/projects/ecommerce.avif" alt="E-Commerce Project" class="project-image" onerror="this.style.display='none'">
-                    <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>Full-featured online shopping platform with cart, payment integration, and admin dashboard.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
+                    <div class="detail-links">
+                        <a href="https://github.com/Vatsal636/DayFlow---HRMS" target="_blank" rel="noopener noreferrer"
+                            class="detail-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <img src="assets/images/projects/hostel.avif" alt="Hostel Management" class="project-image" onerror="this.style.display='none'">
-                    <div class="project-content">
-                        <h3>Hostel Management System</h3>
-                        <p>Digital solution for managing hostel operations, room allocation, and student records.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+            <!-- Job Portal -->
+            <div class="project-card" data-category="fullstack">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/jobportal.avif">
+                        <source type="image/webp" srcset="assets/images/projects/jobportal.webp">
+                        <img src="assets/images/projects/jobportal.png" alt="Job Portal Dashboard" loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Full Stack Application</span>
+                    <h3 class="project-title">Job Portal</h3>
+                    <p class="project-description">
+                        Full-stack MERN job portal with role-based authentication for recruiters and candidates.
+                    </p>
+                    <button class="expand-toggle">
+                        <span>View Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Problem</h4>
+                        <p>Job seekers struggle with scattered job listings across platforms, while recruiters need
+                            efficient tools to post jobs and manage applications in one place.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>💡 Approach</h4>
+                        <p>Created a dual-interface job portal with separate dashboards for recruiters and candidates.
+                            Implemented JWT-based authentication, role separation, and real-time notification system
+                            using the MERN stack.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>✅ Outcomes</h4>
+                        <ul>
+                            <li>Role-based auth (Recruiter/Candidate)</li>
+                            <li>Job posting & management dashboard</li>
+                            <li>Application tracking system</li>
+                            <li>Resume upload functionality</li>
+                            <li>Real-time notifications</li>
+                            <li>Advanced job search & filters</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="detail-tech">
+                            <span class="tech-tag">React 18</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">Tailwind CSS</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="assets/images/projects/jobportal.avif" alt="Job Portal" class="project-image" onerror="this.style.display='none'">
-                    <div class="project-content">
-                        <h3>Job Portal</h3>
-                        <p>Comprehensive job search and recruitment platform connecting employers with job seekers.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
+                    <div class="detail-links">
+                        <a href="https://github.com/Vatsal636/job-portal" target="_blank" rel="noopener noreferrer"
+                            class="detail-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <img src="assets/images/projects/library.avif" alt="Library System" class="project-image" onerror="this.style.display='none'">
-                    <div class="project-content">
-                        <h3>Library Management</h3>
-                        <p>Digital library system for book cataloging, lending management, and member tracking.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+            <!-- TBMS -->
+            <div class="project-card" data-category="fullstack">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/tbms.avif">
+                        <source type="image/webp" srcset="assets/images/projects/tbms.webp">
+                        <img src="assets/images/projects/tbms.png" alt="Textile Business Management System"
+                            loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Enterprise Solution</span>
+                    <h3 class="project-title">Textile Business Management</h3>
+                    <p class="project-description">
+                        Enterprise CMS for textile businesses with inventory tracking and sales analytics.
+                    </p>
+                    <button class="expand-toggle">
+                        <span>View Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Problem</h4>
+                        <p>Textile businesses often rely on manual record-keeping, leading to inventory discrepancies,
+                            delayed sales tracking, and difficulty in generating business insights.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>💡 Approach</h4>
+                        <p>Developed a comprehensive CMS with real-time inventory management, automated sales tracking,
+                            and interactive data visualization using Chart.js for revenue analytics.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>✅ Outcomes</h4>
+                        <ul>
+                            <li>Real-time inventory tracking</li>
+                            <li>Sales analytics dashboard</li>
+                            <li>Revenue visualization charts</li>
+                            <li>Product catalog management</li>
+                            <li>Customer order tracking</li>
+                            <li>Report generation</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="detail-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Chart.js</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="assets/images/projects/mototrack.avif" alt="MotoTrack" class="project-image" onerror="this.style.display='none'">
-                    <div class="project-content">
-                        <h3>MotoTrack</h3>
-                        <p>Vehicle tracking and fleet management application with real-time GPS monitoring.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
+                    <div class="detail-links">
+                        <a href="https://github.com/Vatsal636/Textile-Business-Management-System" target="_blank"
+                            rel="noopener noreferrer" class="detail-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <img src="assets/images/projects/pft.avif" alt="PFT Project" class="project-image" onerror="this.style.display='none'">
-                    <div class="project-content">
-                        <h3>Personal Finance Tracker</h3>
-                        <p>Smart budgeting and expense tracking tool with analytics and financial insights.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+            <!-- Finance Tracker -->
+            <div class="project-card" data-category="fullstack">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/pft.avif">
+                        <source type="image/webp" srcset="assets/images/projects/pft.webp">
+                        <img src="assets/images/projects/pft.png" alt="Personal Finance Tracker" loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">MERN Stack</span>
+                    <h3 class="project-title">Personal Finance Tracker</h3>
+                    <p class="project-description">
+                        Full-featured finance app with dashboards, budget tracking, and investment monitoring.
+                    </p>
+                    <button class="expand-toggle">
+                        <span>View Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Problem</h4>
+                        <p>People struggle to track expenses, manage budgets, and monitor investments across multiple
+                            accounts, leading to poor financial decisions and overspending.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>💡 Approach</h4>
+                        <p>Created a unified finance dashboard that tracks income, expenses, and investments in one
+                            place with interactive charts and budget alerts.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>✅ Outcomes</h4>
+                        <ul>
+                            <li>Interactive financial dashboard</li>
+                            <li>Expense categorization</li>
+                            <li>Budget tracking & alerts</li>
+                            <li>Investment portfolio view</li>
+                            <li>Monthly/yearly analytics</li>
+                            <li>Data export functionality</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="detail-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Tailwind CSS</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <img src="assets/images/projects/tbms.avif" alt="TBMS" class="project-image" onerror="this.style.display='none'">
-                    <div class="project-content">
-                        <h3>Task & Business Management</h3>
-                        <p>Enterprise solution for project management, task tracking, and team collaboration.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
-                        </div>
+                    <div class="detail-links">
+                        <a href="https://github.com/Vatsal636/finance-tracker" target="_blank" rel="noopener noreferrer"
+                            class="detail-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <img src="assets/images/projects/urban.avif" alt="Urban Project" class="project-image" onerror="this.style.display='none'">
-                    <div class="project-content">
-                        <h3>Urban Living</h3>
-                        <p>Modern real estate platform for property listings, virtual tours, and rental management.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Demo</a>
-                            <a href="#" class="project-link">GitHub</a>
+            <!-- Urban Service Provider -->
+            <div class="project-card" data-category="frontend">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/urban.avif">
+                        <source type="image/webp" srcset="assets/images/projects/urban.webp">
+                        <img src="assets/images/projects/urban.png" alt="Urban Service Provider" loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">React Application</span>
+                    <h3 class="project-title">Urban Service Provider</h3>
+                    <p class="project-description">
+                        Modern Urban Company clone with service listings and cart functionality.
+                    </p>
+                    <button class="expand-toggle">
+                        <span>View Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Problem</h4>
+                        <p>Users need a convenient way to browse and book home services like cleaning, repairs, and
+                            beauty services with seamless cart and checkout flow.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>💡 Approach</h4>
+                        <p>Built a React-based service marketplace with Context API for state management, featuring
+                            service categories, cart persisten ce, and responsive design.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>✅ Outcomes</h4>
+                        <ul>
+                            <li>Service category browsing</li>
+                            <li>Add to cart functionality</li>
+                            <li>Responsive mobile layout</li>
+                            <li>Clean, modern UI</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="detail-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Context API</span>
+                            <span class="tech-tag">CSS3</span>
                         </div>
+                    </div>
+                    <div class="detail-links">
+                        <a href="https://github.com/Vatsal636/UC-clone" target="_blank" rel="noopener noreferrer"
+                            class="detail-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MotoTrack -->
+            <div class="project-card" data-category="frontend">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/mototrack.avif">
+                        <source type="image/webp" srcset="assets/images/projects/mototrack.webp">
+                        <img src="assets/images/projects/mototrack.png" alt="MotoTrack Dashboard" loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">React Dashboard</span>
+                    <h3 class="project-title">MotoTrack</h3>
+                    <p class="project-description">
+                        Bike tracking app with odometer logs, fuel tracking, and mileage calculations.
+                    </p>
+                    <button class="expand-toggle">
+                        <span>View Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Problem</h4>
+                        <p>Motorcycle owners struggle to track fuel efficiency, service schedules, and maintenance
+                            history across multiple vehicles.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>💡 Approach</h4>
+                        <p>Created a personal vehicle tracking dashboard with odometer logging, fuel entry tracking,
+                            automatic mileage calculations, and service reminders.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>✅ Outcomes</h4>
+                        <ul>
+                            <li>Odometer log tracking</li>
+                            <li>Fuel efficiency analytics</li>
+                            <li>Mileage calculations</li>
+                            <li>Service reminder alerts</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="detail-tech">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                    </div>
+                    <div class="detail-links">
+                        <a href="https://github.com/Vatsal636/MotoTrack" target="_blank" rel="noopener noreferrer"
+                            class="detail-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E-commerce -->
+            <div class="project-card" data-category="other">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/ecommerce.avif">
+                        <source type="image/webp" srcset="assets/images/projects/ecommerce.webp">
+                        <img src="assets/images/projects/ecommerce.jpg" alt="E-commerce Platform" loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">PHP Application</span>
+                    <h3 class="project-title">E-commerce Platform</h3>
+                    <p class="project-description">
+                        Online store with cart, checkout, and order tracking functionality.
+                    </p>
+                    <button class="expand-toggle">
+                        <span>View Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Problem</h4>
+                        <p>Learning project to understand server-side development fundamentals and database integration
+                            for e-commerce workflows.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>💡 Approach</h4>
+                        <p>Built a traditional e-commerce store using PHP and MySQL, focusing on session-based cart
+                            management, order processing, and admin dashboard.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>✅ Outcomes</h4>
+                        <ul>
+                            <li>Product catalog display</li>
+                            <li>Shopping cart system</li>
+                            <li>Checkout workflow</li>
+                            <li>Order tracking</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="detail-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                    </div>
+                    <div class="detail-links">
+                        <a href="https://github.com/Vatsal636" target="_blank" rel="noopener noreferrer"
+                            class="detail-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hostel Website -->
+            <div class="project-card" data-category="other">
+                <div class="project-image">
+                    <picture>
+                        <source type="image/avif" srcset="assets/images/projects/hostel.avif">
+                        <source type="image/webp" srcset="assets/images/projects/hostel.webp">
+                        <img src="assets/images/projects/hostel.jpg" alt="Hostel Website" loading="lazy">
+                    </picture>
+                    <div class="project-overlay"></div>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Static Website</span>
+                    <h3 class="project-title">Hostel Website</h3>
+                    <p class="project-description">
+                        Responsive website showcasing hostel facilities, events, and information.
+                    </p>
+                    <button class="expand-toggle">
+                        <span>View Details</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="project-details">
+                    <div class="detail-section">
+                        <h4>🎯 Problem</h4>
+                        <p>Hostels need an online presence to showcase facilities, share event updates, and provide
+                            admission information to prospective students.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>💡 Approach</h4>
+                        <p>Designed a clean, responsive static website with smooth animations, image galleries, and
+                            clear information architecture for easy navigation.</p>
+                    </div>
+                    <div class="detail-section">
+                        <h4>✅ Outcomes</h4>
+                        <ul>
+                            <li>Responsive design</li>
+                            <li>Facility showcase</li>
+                            <li>Event gallery</li>
+                            <li>Contact forms</li>
+                        </ul>
+                    </div>
+                    <div class="detail-section">
+                        <h4>🛠️ Tech Stack</h4>
+                        <div class="detail-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="detail-links">
+                        <a href="https://github.com/Vatsal636" target="_blank" rel="noopener noreferrer"
+                            class="detail-link">
+                            <i class="fab fa-github"></i>
+                            <span>View Code</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Vatsal. All rights reserved.</p>
-        </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Designed & Built with <span style="color: #ec4899;">♥</span> by Vatsal Gokani © <span
+                id="currentYear"></span></p>
     </footer>
 
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script>
+        // Project filtering
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                const cards = document.querySelectorAll('.project-card');
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                        card.style.animation = 'fadeIn 0.5s ease forwards';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
-</html>
+
+</html><script async data-explicit-opt-in="true" data-cookie-opt-in="true" data-deployment-id="dpl_2bAMvVHqjjNmBRsubMjNkN6dEm5A" src="https://vercel.live/_next-live/feedback/feedback.js"></script>
