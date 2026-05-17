@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initParallax();
   initExpandableCards();
   initScrollIndicator();
+  initDeveloperConsole();
 
   // Set current year in footer
   const yearEl = document.getElementById('currentYear');
@@ -537,6 +538,249 @@ function initScrollIndicator() {
 
   // Listen for scroll
   window.addEventListener('scroll', handleScroll, { passive: true });
+}
+
+/**
+ * Developer Console Typewriter & Interactive Mode
+ */
+function initDeveloperConsole() {
+  const terminalBody = document.getElementById('terminal-body');
+  const typeWriter = document.getElementById('terminal-typewriter');
+  const inputWrapper = document.getElementById('terminal-input-wrapper');
+  const inputField = document.getElementById('terminal-input');
+  const interactiveCursor = document.getElementById('interactive-cursor');
+  const terminalOutput = document.getElementById('terminal-output');
+  const copyBtn = document.querySelector('.terminal-copy');
+
+  if (!typeWriter || !inputField) return;
+
+  // Available commands for interactive mode
+  const commands = {
+    help: 'Available commands: about, skills, projects, contact, clear, whoami',
+    about: 'I am Vatsal Gokani, a Full Stack Developer passionate about building high-quality web applications.',
+    skills: 'Languages: JS, TS, Python, Java, C++, SQL. Frameworks: React, Next.js, Node.js, Express.',
+    projects: 'DayFlow HRMS, SmartVenue, VoteWise AI. Type "view projects" for more.',
+    contact: 'Email: vatsalgokani2@gmail.com | LinkedIn: vatsal-gokani-7759a0247',
+    whoami: 'A modern web architect in the making.',
+    clear: () => {
+      terminalOutput.innerHTML = '';
+      return '';
+    }
+  };
+
+  const codeTokens = [
+    { text: "const ", class: "syn-keyword" },
+    { text: "developer ", class: "syn-property" },
+    { text: "= ", class: "syn-punctuation" },
+    { text: "{", class: "syn-punctuation" },
+    { text: "\n  ", class: "" },
+
+    { text: "name", class: "syn-property" },
+    { text: ": ", class: "syn-punctuation" },
+    { text: '"Vatsal Gokani"', class: "syn-string" },
+    { text: ",", class: "syn-punctuation" },
+    { text: "\n  ", class: "" },
+
+    { text: "role", class: "syn-property" },
+    { text: ": ", class: "syn-punctuation" },
+    { text: '"Full Stack Developer"', class: "syn-string" },
+    { text: ",", class: "syn-punctuation" },
+    { text: "\n  ", class: "" },
+
+    { text: "skills", class: "syn-property" },
+    { text: ": ", class: "syn-punctuation" },
+    { text: "[", class: "syn-punctuation" },
+    { text: '"React"', class: "syn-string" },
+    { text: ", ", class: "syn-punctuation" },
+    { text: '"Next.js"', class: "syn-string" },
+    { text: ", ", class: "syn-punctuation" },
+    { text: '"Node"', class: "syn-string" },
+    { text: "]", class: "syn-punctuation" },
+    { text: ",", class: "syn-punctuation" },
+    { text: "\n  ", class: "" },
+
+    { text: "passion", class: "syn-property" },
+    { text: ": ", class: "syn-punctuation" },
+    { text: '"Building impactful products"', class: "syn-string" },
+    { text: ",", class: "syn-punctuation" },
+    { text: "\n  ", class: "" },
+
+    { text: "createSolution", class: "syn-property" },
+    { text: ": ", class: "syn-punctuation" },
+    { text: "() ", class: "syn-punctuation" },
+    { text: "=> ", class: "syn-keyword" },
+    { text: "{", class: "syn-punctuation" },
+    { text: "\n    ", class: "" },
+
+    { text: "return ", class: "syn-keyword" },
+    { text: '"Clean & Scalable Code"', class: "syn-string" },
+    { text: ";", class: "syn-punctuation" },
+    { text: "\n  ", class: "" },
+
+    { text: "}", class: "syn-punctuation" },
+    { text: ",", class: "syn-punctuation" },
+    { text: "\n", class: "" },
+
+    { text: "};", class: "syn-punctuation" },
+    { text: "\n\n", class: "" },
+
+    { text: "// Ready to build something amazing?", class: "syn-comment" }
+  ];
+
+  let currentTokenIndex = 0;
+  let currentCharIndex = 0;
+  let isTyping = false;
+
+  // Add cursor for typewriter
+  const cursor = document.createElement('span');
+  cursor.className = 'terminal-cursor';
+
+  // Setup observer to start typing when element is in view
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !isTyping) {
+      isTyping = true;
+      typeWriter.innerHTML = '';
+      typeWriter.appendChild(cursor);
+      typeNextChar();
+      observer.disconnect();
+    }
+  }, { threshold: 0.5 });
+
+  observer.observe(typeWriter);
+
+  let currentSpan = null;
+
+  function typeNextChar() {
+    if (currentTokenIndex >= codeTokens.length) {
+      // Typing finished, remove typewriter cursor and show interactive input
+      cursor.remove();
+      inputWrapper.style.display = 'flex';
+      inputField.focus();
+      return;
+    }
+
+    const token = codeTokens[currentTokenIndex];
+
+    if (currentCharIndex === 0) {
+      currentSpan = document.createElement('span');
+      if (token.class) currentSpan.className = token.class;
+      typeWriter.insertBefore(currentSpan, cursor);
+    }
+
+    currentSpan.textContent += token.text[currentCharIndex];
+    currentCharIndex++;
+
+    if (currentCharIndex >= token.text.length) {
+      currentTokenIndex++;
+      currentCharIndex = 0;
+    }
+
+    // Randomize typing speed slightly for realism, faster overall
+    const speed = Math.random() * 15 + 15;
+    setTimeout(typeNextChar, speed);
+  }
+
+  // Move interactive cursor based on input text width
+  function updateInteractiveCursor() {
+    const textCtx = document.createElement("canvas").getContext("2d");
+    const font = window.getComputedStyle(inputField).font;
+    textCtx.font = font;
+
+    // Measure text before cursor
+    const textBeforeCursor = inputField.value.substring(0, inputField.selectionStart);
+    const width = textCtx.measureText(textBeforeCursor).width;
+
+    // Base offset + calculated width
+    interactiveCursor.style.left = `calc(24px + ${width}px)`;
+  }
+
+  inputField.addEventListener('input', updateInteractiveCursor);
+  inputField.addEventListener('keyup', updateInteractiveCursor);
+  inputField.addEventListener('click', updateInteractiveCursor);
+
+  // Focus input when clicking anywhere in terminal body
+  terminalBody.addEventListener('click', () => {
+    if (inputWrapper.style.display !== 'none') {
+      inputField.focus();
+      updateInteractiveCursor();
+    }
+  });
+
+  // Handle interactive commands
+  inputField.addEventListener('keydown', (e) => {
+    updateInteractiveCursor();
+
+    if (e.key === 'Enter') {
+      const input = inputField.value.trim().toLowerCase();
+      inputField.value = '';
+      updateInteractiveCursor();
+
+      if (input) {
+        processCommand(input);
+      } else {
+        // Empty enter print empty prompt line
+        const emptyLine = document.createElement('div');
+        emptyLine.className = 'terminal-prompt-line';
+        emptyLine.innerHTML = `<span class="prompt-arrow">&gt;</span><span class="prompt-cmd"></span>`;
+        terminalOutput.appendChild(emptyLine);
+        scrollToBottom();
+      }
+    }
+  });
+
+  function processCommand(input) {
+    // Echo command
+    const commandLine = document.createElement('div');
+    commandLine.className = 'terminal-prompt-line';
+    commandLine.innerHTML = `<span class="prompt-arrow">&gt;</span><span class="prompt-cmd">${input}</span>`;
+    terminalOutput.appendChild(commandLine);
+
+    let response = '';
+    if (commands[input]) {
+      if (typeof commands[input] === 'function') {
+        response = commands[input]();
+      } else {
+        response = commands[input];
+      }
+    } else if (input.startsWith('view projects')) {
+      window.location.href = '#projects';
+      response = 'Scrolling to projects...';
+    } else if (input === 'portfolio --whoami') {
+      response = "See my developer object above!";
+    } else {
+      response = `Command not found: ${input}. Type 'help' for available commands.`;
+    }
+
+    if (response) {
+      const responseLine = document.createElement('div');
+      responseLine.className = 'terminal-code syn-comment';
+      responseLine.textContent = response;
+      terminalOutput.appendChild(responseLine);
+    }
+
+    scrollToBottom();
+  }
+
+  function scrollToBottom() {
+    setTimeout(() => {
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+    }, 50);
+  }
+
+  // Copy to clipboard
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      const rawText = codeTokens.map(t => t.text).join('');
+      navigator.clipboard.writeText(rawText).then(() => {
+        copyBtn.innerHTML = '<i class="fas fa-check"></i>';
+        copyBtn.classList.add('copied');
+        setTimeout(() => {
+          copyBtn.innerHTML = '<i class="far fa-copy"></i>';
+          copyBtn.classList.remove('copied');
+        }, 2000);
+      });
+    });
+  }
 }
 
 console.log('🚀 Portfolio V3 Loaded - Made with ❤️ by Vatsal Gokani    ');
